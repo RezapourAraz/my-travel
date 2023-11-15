@@ -1,6 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
+
+// components
+import MainLayout from "./components/layouts/Main.layouts";
+
+// mui
+import { Box } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +17,9 @@ export default function Home() {
         <meta name="description" content="Travel App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className={`${inter.className}`}></main>
+      <MainLayout>
+        <Box>hello</Box>
+      </MainLayout>
     </>
   );
 }
