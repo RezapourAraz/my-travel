@@ -2,10 +2,10 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 
 // components
-import MainLayout from "./components/layouts/Main.layouts";
 
 // mui
 import { Box } from "@mui/material";
+import MainLayout from "@/components/layouts/Main.layouts";
 
 const inter = Inter({ subsets: ["latin"] });
 
