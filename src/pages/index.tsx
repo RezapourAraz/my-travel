@@ -8,6 +8,7 @@ import { Box, Typography } from "@mui/material";
 import MainLayout from "@/components/layouts/Main.layouts";
 import MainSection from "@/components/sections/Main.sections";
 import MainTextCard from "@/components/cards/MainText.cards";
+import MainTabSection from "@/components/sections/MainTab.sections";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function Home() {
       <MainLayout>
         <MainSection />
         <MainTextCard />
+        <MainTabSection />
       </MainLayout>
     </>
   );
