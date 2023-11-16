@@ -4,8 +4,10 @@ import { Inter } from "next/font/google";
 // components
 
 // mui
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import MainLayout from "@/components/layouts/Main.layouts";
+import MainSection from "@/components/sections/Main.sections";
+import MainTextCard from "@/components/cards/MainText.cards";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <MainLayout>
-        <Box></Box>
+        <MainSection />
+        <MainTextCard />
       </MainLayout>
     </>
   );

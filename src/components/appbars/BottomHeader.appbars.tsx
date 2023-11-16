@@ -13,7 +13,7 @@ const BottomHeaderAppbar = () => {
   return (
     <Grid container sx={{ px: 3, py: 2, justifyContent: "space-between" }}>
       <Grid item md={2}>
-        <Typography component="h5" variant="h5">
+        <Typography component="h5" variant="h5" sx={{ color: "grey.200" }}>
           My Travel
         </Typography>
       </Grid>
@@ -21,15 +21,17 @@ const BottomHeaderAppbar = () => {
         <Grid container item md={6} justifyContent="flex-end">
           {routes.map((route) => (
             <Box key={route.id}>
-              <Button onClick={() => {}}>{route.name}</Button>
+              <Button onClick={() => {}} sx={{ color: "grey.200" }}>
+                {route.name}
+              </Button>
             </Box>
           ))}
         </Grid>
         <Grid item>
-          <ShoppingBagOutlinedIcon />
+          <ShoppingBagOutlinedIcon sx={{ color: "grey.200" }} />
         </Grid>
         <Grid container item md={2.5} justifyContent="flex-end">
-          <Button>Become a expert</Button>
+          <Button sx={{ color: "grey.200" }}>Become a expert</Button>
         </Grid>
       </Grid>
     </Grid>

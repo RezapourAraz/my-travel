@@ -27,7 +27,9 @@ export const theme = createTheme({
       default: "#f4f5fa",
       paper: "#ffffff",
     },
-    // primary: themeSetting.color,
+    primary: {
+      main: "#297cbb",
+    },
     secondary: {
       main: "#28243d",
       light: "rgb(40, 36, 61)",
