@@ -5,6 +5,10 @@ import { Box, Container, Grid, Button } from "@mui/material";
 import { mainTab } from "@/dummy/dummyData";
 import HotelTab from "../tabs/Hotel.tabs";
 import TourTab from "../tabs/Tour.tabs";
+import ActivityTab from "../tabs/Activity.tabs";
+import RentalTab from "../tabs/Rental.tabs";
+import CarTab from "../tabs/Car.tabs";
+import YachtTab from "../tabs/Yacht.tabs";
 
 const MainTabSection = () => {
   const [selectedTab, setSelectedTab] = useState("Hotel");
@@ -34,6 +38,10 @@ const MainTabSection = () => {
       >
         {selectedTab === "Hotel" && <HotelTab />}
         {selectedTab === "Tours" && <TourTab />}
+        {selectedTab === "Activity" && <ActivityTab />}
+        {selectedTab === "Rental" && <RentalTab />}
+        {selectedTab === "Car" && <CarTab />}
+        {selectedTab === "Yacht" && <YachtTab />}
       </Grid>
     </Container>
   );
