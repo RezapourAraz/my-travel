@@ -24,6 +24,7 @@ export default function Home() {
         <MainSection />
         <MainTextCard />
         <MainTabSection />
+        <Box height={500}></Box>
       </MainLayout>
     </>
   );

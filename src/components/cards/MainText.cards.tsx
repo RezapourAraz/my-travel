@@ -10,7 +10,7 @@ const MainTextCard = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: 500,
+        height: 550,
         flexDirection: "column",
       }}
     >

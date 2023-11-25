@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // mui
 import { Box, Container, Grid, Button } from "@mui/material";
 import { mainTab } from "@/dummy/dummyData";
+import HotelTab from "../tabs/Hotel.tabs";
 
 const MainTabSection = () => {
   const [selectedTab, setSelectedTab] = useState("Hotel");
@@ -24,8 +25,13 @@ const MainTabSection = () => {
           </Grid>
         ))}
       </Grid>
-      <Grid container bgcolor="grey.200" p={2} sx={{ borderRadius: 1 }}>
-        {selectedTab === "Hotel" && <Box>Hotel</Box>}
+      <Grid
+        container
+        p={2}
+        sx={{ borderRadius: 1, height: 100, boxShadow: 2 }}
+        bgcolor="common.white"
+      >
+        {selectedTab === "Hotel" && <HotelTab />}
       </Grid>
     </Container>
   );

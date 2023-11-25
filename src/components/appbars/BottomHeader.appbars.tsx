@@ -30,8 +30,13 @@ const BottomHeaderAppbar = () => {
         <Grid item>
           <ShoppingBagOutlinedIcon sx={{ color: "grey.200" }} />
         </Grid>
-        <Grid container item md={2.5} justifyContent="flex-end">
-          <Button sx={{ color: "grey.200" }}>Become a expert</Button>
+        <Grid container item md={3} justifyContent="flex-end">
+          <Button
+            variant="contained"
+            sx={{ color: "grey.900", bgcolor: "grey.200" }}
+          >
+            Become a expert
+          </Button>
         </Grid>
       </Grid>
     </Grid>
