@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Box, Container, Grid, Button } from "@mui/material";
 import { mainTab } from "@/dummy/dummyData";
 import HotelTab from "../tabs/Hotel.tabs";
+import TourTab from "../tabs/Tour.tabs";
 
 const MainTabSection = () => {
   const [selectedTab, setSelectedTab] = useState("Hotel");
@@ -28,10 +29,11 @@ const MainTabSection = () => {
       <Grid
         container
         p={2}
-        sx={{ borderRadius: 1, height: 100, boxShadow: 2 }}
+        sx={{ borderRadius: 1, boxShadow: 2 }}
         bgcolor="common.white"
       >
         {selectedTab === "Hotel" && <HotelTab />}
+        {selectedTab === "Tours" && <TourTab />}
       </Grid>
     </Container>
   );
