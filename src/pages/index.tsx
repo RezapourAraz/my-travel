@@ -9,6 +9,7 @@ import MainLayout from "@/components/layouts/Main.layouts";
 import MainSection from "@/components/sections/Main.sections";
 import MainTextCard from "@/components/cards/MainText.cards";
 import MainTabSection from "@/components/sections/MainTab.sections";
+import TopDestinationSection from "@/components/sections/TopDestination.sections";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function Home() {
         <MainSection />
         <MainTextCard />
         <MainTabSection />
-        <Box height={500}></Box>
+        <TopDestinationSection />
       </MainLayout>
     </>
   );
