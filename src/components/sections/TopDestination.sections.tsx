@@ -11,7 +11,17 @@ const TopDestinationSection = () => {
           md={12}
           sx={{ alignItems: "center", textAlign: "center", p: 1, mb: 4 }}
         >
-          <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          <Typography
+            variant="h4"
+            component="span"
+            sx={{
+              fontWeight: "bold",
+              p: 1,
+              borderBottom: 1,
+              borderWidth: 2,
+              borderColor: "primary.main",
+            }}
+          >
             Top Destination
           </Typography>
         </Grid>
