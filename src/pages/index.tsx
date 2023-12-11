@@ -12,6 +12,7 @@ import MainTabSection from "@/components/sections/MainTab.sections";
 import TopDestinationSection from "@/components/sections/TopDestination.sections";
 import TrendingSection from "@/components/sections/Trending.sections";
 import TravelTipsSection from "@/components/sections/TravelTips.sections";
+import WhyChooseSection from "@/components/sections/WhyChoose.sections";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function Home() {
         <TopDestinationSection />
         <TrendingSection />
         <TravelTipsSection />
+        <WhyChooseSection />
       </MainLayout>
     </>
   );
