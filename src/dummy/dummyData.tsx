@@ -27,7 +27,7 @@ export const routes = [
     route: "/rental",
   },
   {
-    id: 4,
+    id: 5,
     name: "Car",
     route: "/car",
   },
@@ -302,5 +302,50 @@ export const tourData = [
     desc: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Comma wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of t",
     expect:
       "Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla.",
+  },
+];
+
+export const todayTopDeals = [
+  {
+    id: 1,
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/img2-2.jpeg",
+    title: "Save big on hotels!",
+    desc: "Book and save with Trip.com on your next stay",
+  },
+  {
+    id: 2,
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img1410300.jpeg",
+    title: "Earning Asiana Club Miles Just Got Easier!",
+    desc: "Book Hotels and Earn Asiana Club Miles!",
+  },
+  {
+    id: 3,
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img13-3.jpeg",
+    title: "Experience Europe Your Way",
+    desc: "With up to 30% Off, experience Europe your way!",
+  },
+  {
+    id: 4,
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/img2-2.jpeg",
+    title: "Save big on hotels!",
+    desc: "Book and save with Trip.com on your next stay",
+  },
+  {
+    id: 5,
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img1410300.jpeg",
+    title: "Earning Asiana Club Miles Just Got Easier!",
+    desc: "Book Hotels and Earn Asiana Club Miles!",
+  },
+  {
+    id: 6,
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img13-3.jpeg",
+    title: "Experience Europe Your Way",
+    desc: "With up to 30% Off, experience Europe your way!",
   },
 ];
