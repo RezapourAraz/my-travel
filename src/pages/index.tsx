@@ -11,6 +11,7 @@ import MainTextCard from "@/components/cards/MainText.cards";
 import MainTabSection from "@/components/sections/MainTab.sections";
 import TopDestinationSection from "@/components/sections/TopDestination.sections";
 import TrendingSection from "@/components/sections/Trending.sections";
+import TravelTipsSection from "@/components/sections/TravelTips.sections";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function Home() {
         <MainTabSection />
         <TopDestinationSection />
         <TrendingSection />
+        <TravelTipsSection />
       </MainLayout>
     </>
   );
