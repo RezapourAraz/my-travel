@@ -50,7 +50,17 @@ type ITourCardProps = {
 const TourCard: FC<ITourCardProps> = ({ tour }) => {
   return (
     <Grid
-      sx={{ border: 1, borderRadius: 1, borderColor: "grey.200", boxShadow: 1 }}
+      sx={{
+        border: 1,
+        borderRadius: 1,
+        borderColor: "grey.200",
+        transition: "transform .3s ease-in-out, box-shadow .3s ease-in-out",
+        cursor: "pointer",
+        "&:hover": {
+          transform: "translateY(-5px)",
+          boxShadow: 1,
+        },
+      }}
     >
       <Grid height={200} sx={{ position: "relative" }}>
         <img
