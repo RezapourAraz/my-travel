@@ -60,6 +60,7 @@ const TourCard: FC<ITourCardProps> = ({ tour }) => {
           transform: "translateY(-5px)",
           boxShadow: 1,
         },
+        height: 400,
       }}
     >
       <Grid height={200} sx={{ position: "relative" }}>
