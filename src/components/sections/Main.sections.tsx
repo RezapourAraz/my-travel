@@ -1,7 +1,7 @@
 import React from "react";
 
 // mui
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 const MainSection = () => {
   return (

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 
 // mui
 import { Box, Typography } from "@mui/material";
 
-const MainTextCard = () => {
+type IMainTextCardProps = {
+  title: string;
+  description: string;
+};
+
+const MainTextCard: FC<IMainTextCardProps> = ({ title, description }) => {
   return (
     <Box
       sx={{
@@ -15,10 +20,10 @@ const MainTextCard = () => {
       }}
     >
       <Typography variant="h2" color="grey.200">
-        Let's The World Together!
+        {title}
       </Typography>
       <Typography variant="h6" color="grey.200">
-        Find awesome hotel, tour, car and activities in London
+        {description}
       </Typography>
     </Box>
   );

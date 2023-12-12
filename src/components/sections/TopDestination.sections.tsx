@@ -27,29 +27,29 @@ const TopDestinationSection = () => {
         </Grid>
         <Grid container item md={12} justifyContent="space-between">
           <Grid item md={5.9}>
-            <DestinationCard img="img2-1.jpeg" alt="United Kingdom" />
+            <DestinationCard id="1" img="img2-1.jpeg" alt="United Kingdom" />
           </Grid>
           <Grid item md={5.9}>
-            <DestinationCard img="img2-2.jpeg" alt="Turkey" />
+            <DestinationCard id="2" img="img2-2.jpeg" alt="Turkey" />
           </Grid>
         </Grid>
 
         <Grid container item md={12} justifyContent="space-between" mt={2}>
           <Grid container item md={5.9} justifyContent="space-between">
             <Grid item md={5.8}>
-              <DestinationCard img="img3.jpeg" alt="United States" />
+              <DestinationCard id="3" img="img3.jpeg" alt="United States" />
             </Grid>
             <Grid item md={5.8}>
-              <DestinationCard img="img3-2.jpeg" alt="Ukraine" />
+              <DestinationCard id="4" img="img3-2.jpeg" alt="Ukraine" />
             </Grid>
           </Grid>
 
           <Grid container item md={5.9} justifyContent="space-between">
             <Grid item md={5.8}>
-              <DestinationCard img="img4-1.jpeg" alt="France" />
+              <DestinationCard id="5" img="img4-1.jpeg" alt="France" />
             </Grid>
             <Grid item md={5.8}>
-              <DestinationCard img="img6.jpeg" alt="India" />
+              <DestinationCard id="6" img="img6.jpeg" alt="India" />
             </Grid>
           </Grid>
         </Grid>

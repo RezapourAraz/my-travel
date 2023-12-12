@@ -28,7 +28,10 @@ export default function Home() {
       </Head>
       <MainLayout>
         <MainSection />
-        <MainTextCard />
+        <MainTextCard
+          title="Let's The World Together!"
+          description="Find awesome hotel, tour, car and activities in London"
+        />
         <MainTabSection />
         <TopDestinationSection />
         <TrendingSection />

@@ -2,13 +2,18 @@ import React, { FC } from "react";
 
 // mui
 import { Box, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 
 type IDestinationCardProps = {
   img: string;
   alt: string;
+  id: string;
 };
 
-const DestinationCard: FC<IDestinationCardProps> = ({ img, alt }) => {
+const DestinationCard: FC<IDestinationCardProps> = ({ img, alt, id }) => {
+  // router
+  const router = useRouter();
+
   return (
     <Box
       sx={{
@@ -42,7 +47,8 @@ const DestinationCard: FC<IDestinationCardProps> = ({ img, alt }) => {
         <Typography
           variant="h6"
           color="common.white"
-          sx={{ p: 1, borderBottom: 1 }}
+          sx={{ p: 1, borderBottom: 1, cursor: "pointer" }}
+          onClick={() => router.push(`destinations/${id}`)}
         >
           {alt}
         </Typography>
