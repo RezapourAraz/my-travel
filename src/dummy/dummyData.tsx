@@ -86,6 +86,8 @@ export const tourData = [
     minAge: 10,
     pickup: "Airport",
     img: "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img4-2-1536x480.jpeg",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img4-2.jpeg",
     bedrooms: 4,
     highlights: "John F.K. International Airport (Google Map)",
     bathroom: 6,

@@ -74,6 +74,7 @@ const DestinationCard: FC<IDestinationCardProps> = ({ img, alt, id }) => {
             cursor: "pointer",
             "&:hover": { color: "grey.500" },
           }}
+          onClick={() => router.push(`/booking?query=hotel`)}
         >
           42 Tours
         </Typography>
@@ -86,6 +87,7 @@ const DestinationCard: FC<IDestinationCardProps> = ({ img, alt, id }) => {
             cursor: "pointer",
             "&:hover": { color: "grey.500" },
           }}
+          onClick={() => router.push(`/booking?query=hotel`)}
         >
           20 Activity
         </Typography>
@@ -98,6 +100,7 @@ const DestinationCard: FC<IDestinationCardProps> = ({ img, alt, id }) => {
             cursor: "pointer",
             "&:hover": { color: "grey.500" },
           }}
+          onClick={() => router.push(`/booking?query=hotel`)}
         >
           32 Yacht
         </Typography>

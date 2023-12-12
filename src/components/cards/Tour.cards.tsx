@@ -7,6 +7,8 @@ import { Box, Grid, Typography, Rating, IconButton } from "@mui/material";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 type ITour = {
   id: number;
@@ -48,6 +50,9 @@ type ITourCardProps = {
 };
 
 const TourCard: FC<ITourCardProps> = ({ tour }) => {
+  // router
+  const router = useRouter();
+
   return (
     <Grid
       sx={{
@@ -127,9 +132,17 @@ const TourCard: FC<ITourCardProps> = ({ tour }) => {
           </Typography>
         </Box>
         <Box sx={{ my: 1 }}>
-          <Typography variant="body1" sx={{ fontWeight: "bold", fontSize: 14 }}>
-            {tour.title}
-          </Typography>
+          <Link
+            href={`/tours/${tour.id}_${tour.title}`}
+            style={{ textDecoration: "none" }}
+          >
+            <Typography
+              variant="body1"
+              sx={{ fontWeight: "bold", fontSize: 14, color: "grey.800" }}
+            >
+              {tour.title}
+            </Typography>
+          </Link>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <Rating
