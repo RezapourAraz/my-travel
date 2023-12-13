@@ -30,6 +30,8 @@ const TopHeaderAppbar = () => {
         px: 3,
         py: 2,
         justifyContent: "space-between",
+        borderBottom: 1,
+        borderColor: "grey.700",
       }}
     >
       <Grid
@@ -40,14 +42,22 @@ const TopHeaderAppbar = () => {
       >
         <Typography
           variant="subtitle2"
-          color={router.pathname !== "/" ? "grey.800" : "grey.200"}
+          color={
+            router.pathname === "/booking" || router.route === "/tours/[tourId]"
+              ? "grey.800"
+              : "grey.200"
+          }
         >
           +98-987-987-9876
         </Typography>
         <Divider variant="middle" orientation="vertical" flexItem />
         <Typography
           variant="subtitle2"
-          color={router.pathname !== "/" ? "grey.800" : "grey.200"}
+          color={
+            router.pathname === "/booking" || router.route === "/tours/[tourId]"
+              ? "grey.800"
+              : "grey.200"
+          }
         >
           info@mytravel.com
         </Typography>
@@ -55,22 +65,46 @@ const TopHeaderAppbar = () => {
       <Grid container item md={4} justifyContent="flex-end">
         <Box sx={{ mx: 1 }}>
           <IconButton
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           >
             <FacebookOutlinedIcon />
           </IconButton>
           <IconButton
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           >
             <TwitterIcon />
           </IconButton>
           <IconButton
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           >
             <InstagramIcon />
           </IconButton>
           <IconButton
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           >
             <TelegramIcon />
           </IconButton>
@@ -80,7 +114,13 @@ const TopHeaderAppbar = () => {
         <Box sx={{ mx: 1 }}>
           <Button
             startIcon={<PermIdentityOutlinedIcon />}
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           >
             Sign in or Register
           </Button>
@@ -88,7 +128,13 @@ const TopHeaderAppbar = () => {
         <Divider variant="middle" orientation="vertical" flexItem />
         <Box sx={{ mx: 1 }}>
           <Button
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           >
             USD
           </Button>

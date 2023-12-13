@@ -14,6 +14,8 @@ const BottomHeaderAppbar = () => {
   // router
   const router = useRouter();
 
+  console.log(router);
+
   return (
     <Grid
       container
@@ -22,14 +24,20 @@ const BottomHeaderAppbar = () => {
         py: 2,
         justifyContent: "space-between",
         borderBottom: 1,
-        borderColor: "grey.200",
+        borderColor: "grey.700",
       }}
     >
       <Grid item md={2}>
         <Typography
           component="h5"
           variant="h5"
-          sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+          sx={{
+            color:
+              router.pathname === "/booking" ||
+              router.route === "/tours/[tourId]"
+                ? "grey.800"
+                : "grey.200",
+          }}
         >
           My Travel
         </Typography>
@@ -41,7 +49,11 @@ const BottomHeaderAppbar = () => {
               <Button
                 onClick={() => {}}
                 sx={{
-                  color: router.pathname !== "/" ? "grey.800" : "grey.200",
+                  color:
+                    router.pathname === "/booking" ||
+                    router.route === "/tours/[tourId]"
+                      ? "grey.800"
+                      : "grey.200",
                 }}
               >
                 {route.name}
@@ -51,15 +63,29 @@ const BottomHeaderAppbar = () => {
         </Grid>
         <Grid item>
           <ShoppingBagOutlinedIcon
-            sx={{ color: router.pathname !== "/" ? "grey.800" : "grey.200" }}
+            sx={{
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
+            }}
           />
         </Grid>
         <Grid container item md={3} justifyContent="flex-end">
           <Button
             variant="contained"
             sx={{
-              color: router.pathname !== "/" ? "grey.200" : "grey.900",
-              bgcolor: router.pathname !== "/" ? "grey.800" : "grey.200",
+              color:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.200"
+                  : "grey.900",
+              bgcolor:
+                router.pathname === "/booking" ||
+                router.route === "/tours/[tourId]"
+                  ? "grey.800"
+                  : "grey.200",
             }}
           >
             Become a expert

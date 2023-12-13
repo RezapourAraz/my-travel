@@ -8,7 +8,6 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <Box>
       <TopHeaderAppbar />
-      <Divider sx={{ bgcolor: "grey.700" }} />
       <BottomHeaderAppbar />
       <Box component="main">{children}</Box>
     </Box>
