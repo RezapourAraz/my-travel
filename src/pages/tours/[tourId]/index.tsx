@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 // components
@@ -30,16 +30,35 @@ import PinDropOutlinedIcon from "@mui/icons-material/PinDropOutlined";
 import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
+import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
+import IndeterminateCheckBoxOutlinedIcon from "@mui/icons-material/IndeterminateCheckBoxOutlined";
 
 const TourDetail = () => {
   // router
   const router = useRouter();
-
   const breadcrumbs = router.asPath.split("/");
 
   const findTour = tourData.find(
     (tour) => tour.id === +breadcrumbs[2].split("_")[0]
   );
+
+  // states
+  const [showMore, setShowMore] = useState(0);
+  const [expanded, setExpanded] = useState(0);
+
+  const showMoreHandler = (arg: number) => {
+    if (showMore === arg) {
+      setShowMore(0);
+    }
+    setShowMore(arg);
+  };
+
+  const expandHandler = (arg: number) => {
+    if (arg === expanded) {
+      setExpanded(0);
+    } else setExpanded(arg);
+  };
 
   return (
     <MainLayout>
@@ -139,9 +158,7 @@ const TourDetail = () => {
             </Grid>
             <Grid sx={{ my: 2 }}>
               <Box>
-                <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
-                  Description
-                </Typography>
+                <Typography variant="h5">Description</Typography>
               </Box>
               <Box sx={{ mt: 2 }}>
                 <Typography variant="subtitle1" color="grey.500">
@@ -149,7 +166,10 @@ const TourDetail = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid container>
+            <Grid
+              container
+              sx={{ borderBottom: 1, pb: 2, borderColor: "grey.200" }}
+            >
               <Grid item md={6} my={1}>
                 <Typography>Highlights</Typography>
                 <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
@@ -196,6 +216,115 @@ const TourDetail = () => {
                   </Grid>
                 ))}
               </Grid>
+            </Grid>
+            <Grid
+              container
+              sx={{ my: 3, borderBottom: 1, pb: 2, borderColor: "grey.200" }}
+            >
+              <Grid item md={12}>
+                <Typography variant="h5">What to Expect</Typography>
+              </Grid>
+              <Grid item md={12}>
+                <Typography variant="subtitle1" color="grey.500">
+                  {findTour?.expect}
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid
+              container
+              sx={{ my: 3, borderBottom: 1, pb: 2, borderColor: "grey.200" }}
+            >
+              <Grid item md={12}>
+                <Typography variant="h5">Itinerary</Typography>
+              </Grid>
+              <Grid item md={12}>
+                {findTour?.itinerary.map((item) => (
+                  <Box sx={{ mt: 2 }}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                        cursor: "pointer",
+                      }}
+                      key={item.id}
+                      onClick={() => showMoreHandler(item.id)}
+                    >
+                      <CircleOutlinedIcon sx={{ color: "primary.main" }} />
+                      <Typography
+                        variant="subtitle1"
+                        color="primary.main"
+                        fontWeight="bold"
+                      >
+                        Day - {item.day} -
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        fontWeight="bold"
+                        color="grey.800"
+                      >
+                        {item.title}
+                      </Typography>
+                    </Box>
+                    {showMore === item.id && (
+                      <Box sx={{ pl: 4, my: 1 }}>
+                        <Typography variant="subtitle2" color="grey.500">
+                          {item.desc}
+                        </Typography>
+                      </Box>
+                    )}
+                  </Box>
+                ))}
+              </Grid>
+            </Grid>
+            <Grid container>
+              <Grid item md={12}>
+                <Typography variant="h5">Location</Typography>
+              </Grid>
+              <Grid item md={12} sx={{ my: 2 }}>
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: 350,
+                    border: 1,
+                    borderColor: "grey.100",
+                  }}
+                ></Box>
+              </Grid>
+            </Grid>
+            <Grid container>
+              <Grid item md={12}>
+                <Typography variant="h5">FAQ</Typography>
+              </Grid>
+              {findTour?.faq.map((item) => (
+                <>
+                  <Grid item md={12} sx={{ my: 2 }} key={item.id}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                        cursor: "pointer",
+                      }}
+                      onClick={() => expandHandler(item.id)}
+                    >
+                      {/* {expanded === item.id ? <IndeterminateCheckBoxOutlinedIcon > : */}
+                      <AddBoxOutlinedIcon
+                        sx={{ fontSize: 32, color: "grey.600" }}
+                      />
+                      {/* } */}
+                      <Typography variant="subtitle1" color="grey.800">
+                        {item.question}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  {expanded === item.id && (
+                    <Box>
+                      <Typography variant="subtitle2">{item.answer}</Typography>
+                    </Box>
+                  )}
+                </>
+              ))}
             </Grid>
           </Grid>
           <Grid item md={3}>
