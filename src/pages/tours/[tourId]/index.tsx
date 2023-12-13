@@ -23,6 +23,13 @@ import { tourData } from "@/dummy/dummyData";
 
 // icons
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import PinDropOutlinedIcon from "@mui/icons-material/PinDropOutlined";
+import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
+import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
 const TourDetail = () => {
   // router
@@ -95,10 +102,100 @@ const TourDetail = () => {
                 ({findTour?.review} review)
               </Typography>
             </Grid>
+            <Grid
+              container
+              sx={{ borderBottom: 1, pb: 2, borderColor: "grey.200" }}
+            >
+              <Grid container item md={4} gap={1} my={2}>
+                <AccessTimeIcon sx={{ color: "primary.main" }} />
+                <Typography sx={{ color: "grey.500" }}>
+                  {findTour?.day} Days
+                </Typography>
+              </Grid>
+              <Grid container item md={4} gap={1} my={2}>
+                <PeopleAltOutlinedIcon sx={{ color: "primary.main" }} />
+                <Typography sx={{ color: "grey.500" }}>
+                  MAx People : {findTour?.maxPeople}
+                </Typography>
+              </Grid>
+              <Grid container item md={4} my={2} gap={1}>
+                <DateRangeOutlinedIcon sx={{ color: "primary.main" }} />
+                <Typography sx={{ color: "grey.500" }}>
+                  {findTour?.date}
+                </Typography>
+              </Grid>
+              <Grid container item md={4} gap={1} my={2}>
+                <PermIdentityOutlinedIcon sx={{ color: "primary.main" }} />
+                <Typography sx={{ color: "grey.500" }}>
+                  Min Age : {findTour?.minAge}
+                </Typography>
+              </Grid>
+              <Grid container item md={4} gap={1} my={2}>
+                <PinDropOutlinedIcon sx={{ color: "primary.main" }} />
+                <Typography sx={{ color: "grey.500" }}>
+                  Pickup : {findTour?.pickup}
+                </Typography>
+              </Grid>
+            </Grid>
             <Grid sx={{ my: 2 }}>
               <Box>
-                <Typography>Description</Typography>
+                <Typography variant="subtitle1" sx={{ fontSize: 20 }}>
+                  Description
+                </Typography>
               </Box>
+              <Box sx={{ mt: 2 }}>
+                <Typography variant="subtitle1" color="grey.500">
+                  {findTour?.desc}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid container>
+              <Grid item md={6} my={1}>
+                <Typography>Highlights</Typography>
+                <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
+                  {findTour?.highlights}
+                </Typography>
+              </Grid>
+              <Grid item md={6} my={1}>
+                <Typography>Bedroom</Typography>
+                <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
+                  {findTour?.bedrooms} Bedrooms
+                </Typography>
+              </Grid>
+              <Grid item md={6} my={1}>
+                <Typography>Departure Time</Typography>
+                <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
+                  {findTour?.departureTime}
+                </Typography>
+              </Grid>
+              <Grid item md={6} my={1}>
+                <Typography>Bathroom</Typography>
+                <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
+                  {findTour?.bathroom} Bathrooms
+                </Typography>
+              </Grid>
+              <Grid item md={6} my={1}>
+                <Typography mb={2}>Price Includes</Typography>
+                {findTour?.includes.map((item) => (
+                  <Grid container gap={1} mt={0.5}>
+                    <CheckOutlinedIcon sx={{ color: "primary.main" }} />
+                    <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
+                      {item}
+                    </Typography>
+                  </Grid>
+                ))}
+              </Grid>
+              <Grid item md={6} my={1}>
+                <Typography mb={2}>Price Excludes</Typography>
+                {findTour?.excludes.map((item) => (
+                  <Grid container gap={1} mt={0.5}>
+                    <CloseOutlinedIcon sx={{ color: "primary.main" }} />
+                    <Typography variant="subtitle1" sx={{ color: "grey.500" }}>
+                      {item}
+                    </Typography>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
           </Grid>
           <Grid item md={3}>
