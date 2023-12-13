@@ -1,13 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 
 // mui
 import { Box } from "@mui/material";
 
-const MainSection = () => {
+type IMainSectionProps = {
+  image?: string;
+};
+
+const MainSection: FC<IMainSectionProps> = ({ image }) => {
   return (
     <Box
       sx={{
-        backgroundImage: "url(img1-2.jpeg)",
+        backgroundImage: image ? `url(${image})` : "url(img1-2.jpeg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

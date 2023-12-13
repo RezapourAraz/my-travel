@@ -147,6 +147,8 @@ export const tourData = [
     minAge: 10,
     pickup: "Airport",
     img: "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/stone-resize.jpg",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/stone-resize.jpg",
     bedrooms: 4,
     highlights: "John F.K. International Airport (Google Map)",
     bathroom: 6,
@@ -206,6 +208,8 @@ export const tourData = [
     minAge: 10,
     pickup: "Airport",
     img: "https://mytravel.madrasthemes.com/wp-content/uploads/2021/12/Bridge7-300x225.jpg",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2021/12/Bridge7-1536x480.jpg",
     bedrooms: 4,
     highlights: "John F.K. International Airport (Google Map)",
     bathroom: 6,
@@ -265,6 +269,8 @@ export const tourData = [
     minAge: 10,
     pickup: "Airport",
     img: "https://mytravel.madrasthemes.com/wp-content/uploads/2021/11/city6-300x225.jpg",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2021/11/city6-1536x480.jpg",
     bedrooms: 4,
     highlights: "John F.K. International Airport (Google Map)",
     bathroom: 6,
@@ -349,5 +355,29 @@ export const todayTopDeals = [
       "https://mytravel.madrasthemes.com/wp-content/uploads/2022/02/img13-3.jpeg",
     title: "Experience Europe Your Way",
     desc: "With up to 30% Off, experience Europe your way!",
+  },
+];
+
+export const howItWorkData = [
+  {
+    id: 1,
+    title: "Sign Up",
+    desc: "Bringing you a modern, comfortable, and connected travel anything with us.",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/img8.jpg",
+  },
+  {
+    id: 2,
+    title: "Add Your Services",
+    desc: "Bringing you a modern, comfortable, and connected travel anything with us.",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/img9.jpg",
+  },
+  {
+    id: 3,
+    title: "Get Booking",
+    desc: "Bringing you a modern, comfortable, and connected travel anything with us.",
+    image:
+      "https://mytravel.madrasthemes.com/wp-content/uploads/2022/03/img10.jpg",
   },
 ];
