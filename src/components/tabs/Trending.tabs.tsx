@@ -8,8 +8,8 @@ import TourCard from "../cards/Tour.cards";
 const routes = [
   {
     id: 1,
-    name: "Trending",
-    value: "trending",
+    name: "Tour",
+    value: "tour",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const routes = [
 
 const TrendingTab = () => {
   // states
-  const [selectedTab, setSelectedTab] = useState("trending");
+  const [selectedTab, setSelectedTab] = useState("tour");
 
   return (
     <Grid
@@ -69,7 +69,7 @@ const TrendingTab = () => {
         </Grid>
       ))}
       <Grid item container md={12} my={2} gap={1}>
-        {selectedTab === "trending" &&
+        {selectedTab === "tour" &&
           tourData.map((tour) => (
             <Grid item md={2.9} key={tour.id} sx={{ justifyContent: "center" }}>
               <TourCard tour={tour} />
