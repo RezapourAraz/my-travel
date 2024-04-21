@@ -11,6 +11,7 @@ const TrendingSection = () => {
         <Grid
           item
           md={12}
+          xs={12}
           sx={{ alignItems: "center", textAlign: "center", p: 1, mb: 1 }}
         >
           <Typography

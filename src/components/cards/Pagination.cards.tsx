@@ -29,7 +29,7 @@ const PaginationCard: FC<IPaginationCardProps> = ({ length, start, end }) => {
           borderRadius: 1,
         }}
       >
-        <Pagination count={length} color="primary" />
+        <Pagination size="small" count={length} color="primary" />
       </Box>
     </Box>
   );

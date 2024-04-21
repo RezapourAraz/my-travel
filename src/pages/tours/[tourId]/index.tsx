@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 // components
 import MainFooter from "@/components/footer/Main.footer";
 import MainLayout from "@/components/layouts/Main.layouts";
+import TopHeaderBody from "@/components/body/TopHeader.body";
+import FastInfoBody from "@/components/body/FastInfo.body";
+import DetailsBody from "@/components/body/Details.body";
 
 // mui
 import {
@@ -18,23 +21,10 @@ import {
 
 // icons
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import MainSection from "@/components/sections/Main.sections";
-import { tourData } from "@/dummy/dummyData";
-
-// icons
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
-import PinDropOutlinedIcon from "@mui/icons-material/PinDropOutlined";
-import DateRangeOutlinedIcon from "@mui/icons-material/DateRangeOutlined";
-
 import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
-import IndeterminateCheckBoxOutlinedIcon from "@mui/icons-material/IndeterminateCheckBoxOutlined";
-import TopHeaderBody from "@/components/body/TopHeader.body";
-import FastInfoBody from "@/components/body/FastInfo.body";
-import DetailsBody from "@/components/body/Details.body";
+
+import { tourData } from "@/dummy/dummyData";
 
 const TourDetail = () => {
   // router
@@ -97,7 +87,7 @@ const TourDetail = () => {
       />
       <Container maxWidth="lg" sx={{ my: 3 }}>
         <Grid container justifyContent="space-between">
-          <Grid item md={8}>
+          <Grid item md={8} xs={12}>
             <Grid>
               <Typography variant="h5">{findTour?.title}</Typography>
             </Grid>
@@ -118,10 +108,10 @@ const TourDetail = () => {
               container
               sx={{ my: 3, borderBottom: 1, pb: 2, borderColor: "grey.200" }}
             >
-              <Grid item md={12}>
+              <Grid item md={12} xs={12}>
                 <Typography variant="h5">What to Expect</Typography>
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={12} xs={12}>
                 <Typography variant="subtitle1" color="grey.500">
                   {findTour?.expect}
                 </Typography>
@@ -131,10 +121,10 @@ const TourDetail = () => {
               container
               sx={{ my: 3, borderBottom: 1, pb: 2, borderColor: "grey.200" }}
             >
-              <Grid item md={12}>
+              <Grid item md={12} xs={12}>
                 <Typography variant="h5">Itinerary</Typography>
               </Grid>
-              <Grid item md={12}>
+              <Grid item md={12} xs={12}>
                 {findTour?.itinerary.map((item) => (
                   <Box sx={{ mt: 2 }}>
                     <Box
@@ -175,10 +165,10 @@ const TourDetail = () => {
               </Grid>
             </Grid>
             <Grid container>
-              <Grid item md={12}>
+              <Grid item md={12} xs={12}>
                 <Typography variant="h5">Location</Typography>
               </Grid>
-              <Grid item md={12} sx={{ my: 2 }}>
+              <Grid item md={12} xs={12} sx={{ my: 2 }}>
                 <Box
                   sx={{
                     width: "100%",
@@ -195,7 +185,7 @@ const TourDetail = () => {
               </Grid>
               {findTour?.faq.map((item) => (
                 <>
-                  <Grid item md={12} sx={{ my: 2 }} key={item.id}>
+                  <Grid item md={12} xs={!2} sx={{ my: 2 }} key={item.id}>
                     <Box
                       sx={{
                         display: "flex",
@@ -224,7 +214,7 @@ const TourDetail = () => {
               ))}
             </Grid>
           </Grid>
-          <Grid item md={3}>
+          <Grid item md={3} xs={12}>
             <Grid
               sx={{ border: 1, borderColor: "grey.200", p: 2, borderRadius: 1 }}
             >

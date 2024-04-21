@@ -21,7 +21,7 @@ import { todayTopDeals } from "@/dummy/dummyData";
 const TodayTopSection = () => {
   // states
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState<any>();
 
   useEffect(() => {
     const handleResize = () => {

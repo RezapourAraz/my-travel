@@ -133,7 +133,7 @@ const Booking = () => {
     <MainLayout>
       <Container maxWidth="lg">
         <Grid container sx={{ my: 5, justifyContent: "space-between" }}>
-          <Grid item md={3}>
+          <Grid item md={3} xs={12}>
             <Box
               sx={{ p: 3, border: 1, borderColor: "grey.200", borderRadius: 1 }}
             >
@@ -166,7 +166,7 @@ const Booking = () => {
               />
             ))}
           </Grid>
-          <Grid container item md={8.5}>
+          <Grid container item md={8.5} xs={12}>
             <Box>
               <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                 {query}: 21 results found
@@ -176,6 +176,7 @@ const Booking = () => {
               container
               item
               md={12}
+              xs={12}
               sx={{
                 justifyContent: "space-between",
                 border: 1,
@@ -184,6 +185,9 @@ const Booking = () => {
                 height: 50,
                 borderRadius: 1,
                 borderColor: "grey.200",
+                mb: { md: 0, xs: 5 },
+                flexWrap: "nowrap",
+                overflowX: "auto",
               }}
             >
               {filters.map((filter, idx) => (
@@ -194,9 +198,12 @@ const Booking = () => {
                       display: "flex",
                       cursor: "pointer",
                       p: 1,
+                      flexWrap: "nowrap",
                     }}
                   >
-                    <Typography>{filter.name}</Typography>
+                    <Typography variant="subtitle2" sx={{ textWrap: "nowrap" }}>
+                      {filter.name}
+                    </Typography>
                   </Box>
                   {idx < filters.length - 1 && (
                     <Divider orientation="vertical" flexItem />
@@ -204,11 +211,12 @@ const Booking = () => {
                 </>
               ))}
             </Grid>
-            <Grid item container md={12} my={2} gap={1}>
+            <Grid item container md={12} xs={12} my={2} gap={1}>
               {tourData.map((tour) => (
                 <Grid
                   item
                   md={3.9}
+                  xs={12}
                   key={tour.id}
                   sx={{ justifyContent: "center" }}
                 >
@@ -219,6 +227,7 @@ const Booking = () => {
                 <Grid
                   item
                   md={3.9}
+                  xs={12}
                   key={tour.id}
                   sx={{ justifyContent: "center" }}
                 >
@@ -229,6 +238,7 @@ const Booking = () => {
                 <Grid
                   item
                   md={3.9}
+                  xs={12}
                   key={tour.id}
                   sx={{ justifyContent: "center" }}
                 >
@@ -236,8 +246,8 @@ const Booking = () => {
                 </Grid>
               ))}
             </Grid>
-            <Grid item md={12} sx={{ my: 2 }}>
-              <PaginationCard length={100} start={1} end={10} />
+            <Grid item md={12} xs={12} sx={{ my: 2 }}>
+              <PaginationCard length={10} start={1} end={10} />
             </Grid>
           </Grid>
         </Grid>
