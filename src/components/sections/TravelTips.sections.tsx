@@ -27,7 +27,11 @@ const TravelTipsSection = () => {
           </Typography>
           <Typography
             variant="h6"
-            sx={{ width: 600, color: "common.white", my: 3 }}
+            sx={{
+              width: { md: 600, xs: "100%" },
+              color: "common.white",
+              my: 3,
+            }}
           >
             Northern Ireland’s is now contingent. Britain is getting a divorce
             Northern Ireland is being offered a trial separation for Britain

@@ -16,7 +16,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 const HotelTab = () => {
   return (
     <Grid container justifyContent="space-between" p={1} alignItems="center">
-      <Grid item md={3}>
+      <Grid item md={3} xs={12}>
         <Typography
           variant="h6"
           sx={{ fontSize: 16, color: "grey.700", mb: 1 }}
@@ -24,6 +24,7 @@ const HotelTab = () => {
           Destination or Hotel Name
         </Typography>
         <TextField
+          fullWidth
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -35,25 +36,33 @@ const HotelTab = () => {
           placeholder="Where are you going?"
         />
       </Grid>
-      <Grid item md={3}>
+      <Grid item md={3} xs={12}>
         <Typography
           variant="h6"
           sx={{ fontSize: 16, color: "grey.700", mb: 1 }}
         >
           Check In - Out
         </Typography>
-        <TextField variant="standard" placeholder="Where are you going?" />
+        <TextField
+          fullWidth
+          variant="standard"
+          placeholder="Where are you going?"
+        />
       </Grid>
-      <Grid item md={3}>
+      <Grid item md={3} xs={12}>
         <Typography
           variant="h6"
           sx={{ fontSize: 16, color: "grey.700", mb: 1 }}
         >
           Rooms and Guests
         </Typography>
-        <TextField variant="standard" placeholder="Where are you going?" />
+        <TextField
+          fullWidth
+          variant="standard"
+          placeholder="Where are you going?"
+        />
       </Grid>
-      <Grid item md={2}>
+      <Grid item md={2} xs={12} sx={{ mt: { md: 0, xs: 2 } }}>
         <Button
           fullWidth
           variant="contained"

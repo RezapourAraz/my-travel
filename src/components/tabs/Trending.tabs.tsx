@@ -71,7 +71,13 @@ const TrendingTab = () => {
       <Grid item container md={12} my={2} gap={1}>
         {selectedTab === "tour" &&
           tourData.map((tour) => (
-            <Grid item md={2.9} key={tour.id} sx={{ justifyContent: "center" }}>
+            <Grid
+              item
+              md={2.9}
+              xs={12}
+              key={tour.id}
+              sx={{ justifyContent: "center" }}
+            >
               <TourCard tour={tour} />
             </Grid>
           ))}

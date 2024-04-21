@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // mui
 import { Box, Container, Grid, Typography } from "@mui/material";
@@ -19,12 +19,29 @@ import { Navigation } from "swiper/modules";
 import { todayTopDeals } from "@/dummy/dummyData";
 
 const TodayTopSection = () => {
+  // states
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Container maxWidth="lg">
       <Grid container>
         <Grid
           item
           md={12}
+          xs={12}
           sx={{ alignItems: "center", textAlign: "center", p: 1, mb: 4 }}
         >
           <Typography
@@ -42,11 +59,9 @@ const TodayTopSection = () => {
           </Typography>
         </Grid>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={width < 700 ? 1 : 3}
           spaceBetween={30}
           className="mySwiper"
-          navigation={true}
-          modules={[Navigation]}
         >
           {todayTopDeals.map((item) => (
             <Grid key={item.id}>

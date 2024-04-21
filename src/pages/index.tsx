@@ -2,9 +2,6 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 
 // components
-
-// mui
-import { Box, Typography } from "@mui/material";
 import MainLayout from "@/components/layouts/Main.layouts";
 import MainSection from "@/components/sections/Main.sections";
 import MainTextCard from "@/components/cards/MainText.cards";
@@ -15,6 +12,8 @@ import TravelTipsSection from "@/components/sections/TravelTips.sections";
 import WhyChooseSection from "@/components/sections/WhyChoose.sections";
 import TodayTopSection from "@/components/sections/TodayTop.sections";
 import MainFooter from "@/components/footer/Main.footer";
+// mui
+import { Box, Typography } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 

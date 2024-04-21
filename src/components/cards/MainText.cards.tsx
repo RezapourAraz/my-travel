@@ -17,6 +17,7 @@ const MainTextCard: FC<IMainTextCardProps> = ({ title, description }) => {
         justifyContent: "center",
         height: 550,
         flexDirection: "column",
+        textAlign: { md: "initial", xs: "center" },
       }}
     >
       <Typography variant="h2" color="grey.200">

@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 // mui
 import {
@@ -17,7 +18,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
-import { useRouter } from "next/router";
 
 const TopHeaderAppbar = () => {
   // router
@@ -31,14 +31,18 @@ const TopHeaderAppbar = () => {
         py: 2,
         justifyContent: "space-between",
         borderBottom: 1,
-        borderColor: "grey.700",
+        borderColor: "grey.600",
+        display: { md: "flex", xs: "none" },
       }}
     >
       <Grid
         container
         item
-        md={2}
-        sx={{ justifyContent: "space-between", alignItems: "center" }}
+        md={2.5}
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
       >
         <Typography
           variant="subtitle2"
@@ -48,9 +52,14 @@ const TopHeaderAppbar = () => {
               : "grey.200"
           }
         >
-          +98-987-987-9876
+          +98-914-4363473
         </Typography>
-        <Divider variant="middle" orientation="vertical" flexItem />
+        <Divider
+          variant="middle"
+          orientation="vertical"
+          flexItem
+          sx={{ bgcolor: "grey.600" }}
+        />
         <Typography
           variant="subtitle2"
           color={
@@ -59,7 +68,7 @@ const TopHeaderAppbar = () => {
               : "grey.200"
           }
         >
-          info@mytravel.com
+          rezapouraraz@gmail.com
         </Typography>
       </Grid>
       <Grid container item md={4} justifyContent="flex-end">
@@ -109,7 +118,12 @@ const TopHeaderAppbar = () => {
             <TelegramIcon />
           </IconButton>
         </Box>
-        <Divider variant="middle" orientation="vertical" flexItem />
+        <Divider
+          variant="middle"
+          orientation="vertical"
+          flexItem
+          sx={{ bgcolor: "grey.600" }}
+        />
 
         <Box sx={{ mx: 1 }}>
           <Button
@@ -125,7 +139,12 @@ const TopHeaderAppbar = () => {
             Sign in or Register
           </Button>
         </Box>
-        <Divider variant="middle" orientation="vertical" flexItem />
+        <Divider
+          variant="middle"
+          orientation="vertical"
+          flexItem
+          sx={{ bgcolor: "grey.600" }}
+        />
         <Box sx={{ mx: 1 }}>
           <Button
             sx={{

@@ -1,10 +1,12 @@
 import React from "react";
 
 // mui
-import { Grid, Typography, Box, Button } from "@mui/material";
+import { Grid, Typography, Box, Button, IconButton } from "@mui/material";
 
 // icons
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import MenuIcon from "@mui/icons-material/Menu";
 
 // data
 import { routes } from "@/dummy/dummyData";
@@ -14,8 +16,6 @@ const BottomHeaderAppbar = () => {
   // router
   const router = useRouter();
 
-  console.log(router);
-
   return (
     <Grid
       container
@@ -24,10 +24,11 @@ const BottomHeaderAppbar = () => {
         py: 2,
         justifyContent: "space-between",
         borderBottom: 1,
-        borderColor: "grey.700",
+        borderColor: "grey.600",
+        alignItems: "center",
       }}
     >
-      <Grid item md={2}>
+      <Grid item md={2} xs={5}>
         <Typography
           component="h5"
           variant="h5"
@@ -42,8 +43,21 @@ const BottomHeaderAppbar = () => {
           My Travel
         </Typography>
       </Grid>
-      <Grid container item md={6} justifyContent="flex-end" alignItems="center">
-        <Grid container item md={6} justifyContent="flex-end">
+      <Grid
+        container
+        item
+        md={6}
+        xs={7}
+        justifyContent="flex-end"
+        alignItems="center"
+      >
+        <Grid
+          container
+          item
+          md={6}
+          justifyContent="flex-end"
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
           {routes.map((route) => (
             <Box key={route.id}>
               <Button
@@ -62,17 +76,51 @@ const BottomHeaderAppbar = () => {
           ))}
         </Grid>
         <Grid item>
-          <ShoppingBagOutlinedIcon
-            sx={{
-              color:
-                router.pathname === "/booking" ||
-                router.route === "/tours/[tourId]"
-                  ? "grey.800"
-                  : "grey.200",
-            }}
-          />
+          <IconButton>
+            <ShoppingBagOutlinedIcon
+              sx={{
+                color:
+                  router.pathname === "/booking" ||
+                  router.route === "/tours/[tourId]"
+                    ? "grey.800"
+                    : "grey.200",
+                display: { md: "block", xs: "none" },
+              }}
+            />
+          </IconButton>
+
+          <IconButton>
+            <PermIdentityIcon
+              sx={{
+                color:
+                  router.pathname === "/booking" ||
+                  router.route === "/tours/[tourId]"
+                    ? "grey.800"
+                    : "grey.200",
+                display: { md: "none", xs: "block" },
+              }}
+            />
+          </IconButton>
+          <IconButton>
+            <MenuIcon
+              sx={{
+                color:
+                  router.pathname === "/booking" ||
+                  router.route === "/tours/[tourId]"
+                    ? "grey.800"
+                    : "grey.200",
+                display: { md: "none", xs: "block" },
+              }}
+            />
+          </IconButton>
         </Grid>
-        <Grid container item md={3} justifyContent="flex-end">
+        <Grid
+          container
+          item
+          md={3}
+          justifyContent="flex-end"
+          sx={{ display: { md: "flex", xs: "none" } }}
+        >
           <Button
             variant="contained"
             sx={{
@@ -86,6 +134,9 @@ const BottomHeaderAppbar = () => {
                 router.route === "/tours/[tourId]"
                   ? "grey.800"
                   : "grey.200",
+              ":hover": {
+                color: "common.white",
+              },
             }}
           >
             Become a expert

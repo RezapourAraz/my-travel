@@ -15,7 +15,7 @@ const MainSection: FC<IMainSectionProps> = ({ image }) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: 800,
+        height: { md: 800, xs: 1050 },
         position: "absolute",
         top: 0,
         left: 0,

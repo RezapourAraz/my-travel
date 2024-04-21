@@ -5,7 +5,7 @@ import DestinationCard from "../cards/Destination.cards";
 const TopDestinationSection = () => {
   return (
     <Container maxWidth="lg">
-      <Grid container sx={{ my: 7 }}>
+      <Grid container sx={{ mt: { md: 7, xs: 25 }, mb: 7 }}>
         <Grid
           item
           md={12}
@@ -26,29 +26,36 @@ const TopDestinationSection = () => {
           </Typography>
         </Grid>
         <Grid container item md={12} justifyContent="space-between">
-          <Grid item md={5.9}>
+          <Grid item md={5.9} xs={12}>
             <DestinationCard id="1" img="img2-1.jpeg" alt="United Kingdom" />
           </Grid>
-          <Grid item md={5.9}>
+          <Grid item md={5.9} xs={12}>
             <DestinationCard id="2" img="img2-2.jpeg" alt="Turkey" />
           </Grid>
         </Grid>
 
-        <Grid container item md={12} justifyContent="space-between" mt={2}>
-          <Grid container item md={5.9} justifyContent="space-between">
-            <Grid item md={5.8}>
+        <Grid
+          container
+          item
+          md={12}
+          xs={12}
+          justifyContent="space-between"
+          mt={2}
+        >
+          <Grid container item md={5.9} xs={12} justifyContent="space-between">
+            <Grid item md={5.8} xs={12}>
               <DestinationCard id="3" img="img3.jpeg" alt="United States" />
             </Grid>
-            <Grid item md={5.8}>
+            <Grid item md={5.8} xs={12}>
               <DestinationCard id="4" img="img3-2.jpeg" alt="Ukraine" />
             </Grid>
           </Grid>
 
           <Grid container item md={5.9} justifyContent="space-between">
-            <Grid item md={5.8}>
+            <Grid item md={5.8} xs={12}>
               <DestinationCard id="5" img="img4-1.jpeg" alt="France" />
             </Grid>
-            <Grid item md={5.8}>
+            <Grid item md={5.8} xs={12}>
               <DestinationCard id="6" img="img6.jpeg" alt="India" />
             </Grid>
           </Grid>

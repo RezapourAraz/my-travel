@@ -11,6 +11,7 @@ import CarTab from "../tabs/Car.tabs";
 import YachtTab from "../tabs/Yacht.tabs";
 
 const MainTabSection = () => {
+  // states
   const [selectedTab, setSelectedTab] = useState("Hotel");
 
   return (

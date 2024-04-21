@@ -16,7 +16,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 const ActivityTab = () => {
   return (
     <Grid container justifyContent="space-between" alignItems="center">
-      <Grid item md={9}>
+      <Grid item md={9} xs={12}>
         <Typography
           variant="h6"
           sx={{ fontSize: 16, color: "grey.700", mb: 1 }}
@@ -36,7 +36,7 @@ const ActivityTab = () => {
           }}
         />
       </Grid>
-      <Grid item md={2.5}>
+      <Grid item md={2.5} xs={12} sx={{ mt: { md: 0, xs: 2 } }}>
         <Button
           fullWidth
           variant="contained"

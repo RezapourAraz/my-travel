@@ -15,6 +15,7 @@ const WhyChooseSection = () => {
         <Grid
           item
           md={12}
+          xs={12}
           sx={{ alignItems: "center", textAlign: "center", p: 1, mb: 4 }}
         >
           <Typography
@@ -31,7 +32,7 @@ const WhyChooseSection = () => {
             Why Choose
           </Typography>
         </Grid>
-        <Grid item md={4} sx={{ textAlign: "center", p: 1 }}>
+        <Grid item md={4} xs={12} sx={{ textAlign: "center", p: 1 }}>
           <PriceCheckOutlinedIcon
             sx={{ fontSize: 58, color: "primary.main", my: 1 }}
           />
@@ -43,7 +44,7 @@ const WhyChooseSection = () => {
             mytravel.com can save you more!
           </Typography>
         </Grid>
-        <Grid item md={4} sx={{ textAlign: "center", p: 1 }}>
+        <Grid item md={4} xs={12} sx={{ textAlign: "center", p: 1 }}>
           <WorkspacePremiumOutlinedIcon
             sx={{ fontSize: 58, color: "primary.main", my: 1 }}
           />
@@ -55,7 +56,7 @@ const WhyChooseSection = () => {
             day
           </Typography>
         </Grid>
-        <Grid item md={4} sx={{ textAlign: "center", p: 1 }}>
+        <Grid item md={4} xs={12} sx={{ textAlign: "center", p: 1 }}>
           <PublicOutlinedIcon
             sx={{ fontSize: 58, color: "primary.main", my: 1 }}
           />
